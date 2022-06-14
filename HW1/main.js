@@ -8,8 +8,14 @@
     - Численность населения (число)
     - Есть ли футбольный стадион (boolean [ true(да) / false(нет) ])
 */
-
-
+let townName = 'Poltava';
+let country = 'Ukraine';
+let population = 276200;
+let stadium = true;
+let result1 = `${townName} ${country} ${population} ${stadium}`;
+let exercise1 = 'Задание 1';
+console.log(exercise1);
+console.log(result1);
 
 /* 
     Задание 2:
@@ -22,7 +28,12 @@
     ps: каждая сущность должна находиться в отдельной переменной
 */
 
-
+const a = 40;
+const b = 70;
+let result2 = (a * b) + 'см';
+let exercise2 = 'Задание 2';
+console.log(exercise2);
+console.log(result2);
 
 /* 
     Задание 3:
@@ -39,7 +50,14 @@
 
 */
 
-
+const time = 2,
+    speedOfFirst = 95,
+    speedOfSecond = 114;
+let distanceTown = (time * speedOfFirst) + (time * speedOfSecond);
+let result3 = 'Відстань між містами ' + distanceTown + 'км';
+let exercise3 = 'Задание 3';
+console.log(exercise3);
+console.log(result3);
 
 /* 
     Задание 4:
@@ -55,10 +73,41 @@
     - если ни один из вариантов не совпал, то выведите в консоль сообщение : "randomNumber больше 20, и меньше 50"
 */
 
+let exercise4 = 'Задание 4';
+console.log(exercise4);
 
+const randomNumber = Math.floor(Math.random() * 100);
+let result4 = randomNumber;
+console.log(result4);
+if (randomNumber < '20') {
+    console.log("randomNumber меньше 20");
+} else if (randomNumber > '50') {
+    console.log("randomNumber больше 50");
+} else {
+    console.log("randomNumber больше 20, и меньше 50");  
+}
 
 /* 
     Задание 5:
     
     Условную конструкцию из задания 4, перепишите с помощью Switch Case
 */
+
+let exercise5 = 'Задание 5';
+console.log(exercise5);
+
+const randomNumber2 = Math.floor(Math.random() * 100);
+let result5 = randomNumber2;
+console.log(result5);
+
+switch (randomNumber2) {
+    case randomNumber2 < 20:
+        console.log('randomNumber меньше 20');
+        break;
+    case randomNumber2 > 50:
+        console.log('randomNumber больше 50');
+        break;
+    default:
+        console.log('randomNumber больше 20, и меньше 50');
+}
+
