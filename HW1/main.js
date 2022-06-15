@@ -100,11 +100,13 @@ const randomNumber2 = Math.floor(Math.random() * 100);
 let result5 = randomNumber2;
 console.log(result5);
 
-switch (randomNumber2) {
-    case randomNumber2 < 20:
+switch (result5) {
+    case result5 == 0:
+        console.log('randomNumber меньше 20');
+    case result5<=20 && result5>0:
         console.log('randomNumber меньше 20');
         break;
-    case randomNumber2 > 50:
+    case result5<=100 && result5>50:
         console.log('randomNumber больше 50');
         break;
     default:
