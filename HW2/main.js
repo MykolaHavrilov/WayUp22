@@ -3,6 +3,14 @@
 
     Вывести в консоль с помощью цикла FOR все четные числа от 10 до 50
 */
+let exercise1 = 'Задание 1';
+console.log(exercise1);
+
+for (let i = 10; i <= 50; i++){
+    if (i % 2 == 0) {
+        console.log(i);
+    }
+}
 
 /* 
     Задание 2:
@@ -16,6 +24,20 @@
     - Возраст(number)
     - Есть ли домашние животные(boolean)
 */
+let exercise2 = 'Задание 2';
+console.log(exercise2);
+
+const User = {
+    firstName: 'Mykola',
+    lastName: 'Havrilov',
+    age: 30,
+    pets: true
+};
+
+// const rusult2 = `${User.firstName} ${User.lastName} ${User.age} ${User.pets}`;
+// console.log(rusult2);
+console.log(User);
+
 
 /* 
     Задание 3:
@@ -47,7 +69,29 @@
 
    итоговый текст должен быть собран из массива array и результат записать в переменную result
 */
+let exercise3 = 'Задание 3';
+console.log(exercise3);
 
+const array = [
+    'я в Симбирск,',
+    'в трактире.',
+    'с утра',
+    'В ту же ночь',
+    'Я остановился',
+    'для закупки', 
+    'что и было поручено Савельичу.',
+    'приехал,',
+    'где должен был',
+    'нужных вещей,',
+    'отправился по лавкам',
+    'пробыть сутки',
+    'Савельич'
+]
+
+let result3 = (array[3] + ' ' + array[7] + ' ' + array[0] + ' ' + array[8] + ' ' +
+    array[11] + ' ' + array[5] + ' ' + array[9] + ' ' + array[6] + ' ' + array[4]
+    + ' ' + array[1] + ' ' + array[12] + ' ' + array[2] + ' ' + array[10]);
+console.log(result3);
 /* 
     Задание 4:
 
@@ -60,6 +104,16 @@
 
     При вызове функции передайте ей, в качестве аргумента, свое имя и фамилию.
 */
+let exercise4 = 'Задание 4';
+console.log(exercise4);
+
+
+const UserName = (firstName, lastName) => {
+    const fullName = `${firstName} ${lastName}`;
+    console.log(fullName);
+}    
+UserName('Mykola', 'Havrilov');
+
 
 /* 
     Задание 5:
@@ -67,3 +121,15 @@
     Вывести в консоль с помощью цикла WHILE все нечетные числа от 21 до 67
     
 */
+let exercise5 = 'Задание 5';
+console.log(exercise5);
+
+let i = 20;
+while (i <= 67) {
+    i++
+    if (i % 2 != 0) {
+        console.log(i);
+    }
+    
+}
+
