@@ -101,12 +101,10 @@ let result5 = randomNumber2;
 console.log(result5);
 
 switch (result5) {
-    case result5 == 0:
-        console.log('randomNumber меньше 20');
-    case result5<=20 && result5>0:
+    case (result5<20) && result5:
         console.log('randomNumber меньше 20');
         break;
-    case result5<=100 && result5>50:
+    case (result5>50) && result5:
         console.log('randomNumber больше 50');
         break;
     default:
