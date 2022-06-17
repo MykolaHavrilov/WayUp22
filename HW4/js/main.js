@@ -8,7 +8,7 @@ btnOpen.addEventListener('click',function(){
     modal.classList.add('active');
 });
 
-function closeModal(){
+function closeModal() {
     modal.classList.remove('active');
 }
 
@@ -25,7 +25,66 @@ btnClose.addEventListener('click',closeModal);
 
 */
 
+const prev = document.getElementById('btn-prev'),
+    next = document.getElementById('btn-next'),
+    slides = document.querySelectorAll('.slide'),
+    dots = document.querySelectorAll('.dot');
 
+let index = 0;
+
+const activeSlide = n => {
+    for (slede of slides) {
+        slede.classList.remove('active');
+    }
+    slides[n].classList.add('active');
+}
+
+const activeDot = n => {
+    for (dot of dots) {
+        dot.classList.remove('active');
+    }
+    dots[n].classList.add('active');
+}
+
+const prepareCurrentSlide = int => {
+    activeSlide(index);
+    activeDot(index);
+}
+
+const nextSlide = () => {
+    if (index == slides.length - 1) {
+        index = 0;
+        prepareCurrentSlide(index);
+    } else {
+        index++;
+        prepareCurrentSlide(index);
+    }
+}
+
+const prevSlide = () => {
+    if (index == 0) {
+        index = slides.length - 1;
+        prepareCurrentSlide(index);
+    } else {
+        index--;
+        prepareCurrentSlide(index);
+    }
+}
+
+dots.forEach((item, indexDot) => {
+    item.addEventListener('click', () => {
+        index = indexDot;
+        prepareCurrentSlide(index);
+    })
+})
+
+let timerId = setTimeout(function tick() {
+  nextSlide('tick');
+  timerId = setTimeout(tick, 2000); // (*)
+}, 2000);
+
+next.addEventListener('click', nextSlide);
+prev.addEventListener('click', prevSlide);
 
 /* 
     Задание 2:
@@ -57,3 +116,29 @@ tabs.addEventListener('click', e => {
         }
     }
 })
+
+const tabsTwo = document.getElementById('tabs-two');
+const contentTwo = document.querySelectorAll('.content-two');
+
+const changeClassTwo = el => {
+    for (let i = 0; i < tabsTwo.children.length; i++) {
+        tabsTwo.children[i].classList.remove('active');
+    }
+    el.classList.add('active');
+    
+}
+console.log(changeClassTwo);
+
+
+tabsTwo.addEventListener('click', e => {
+    const currTab = e.target.dataset.btnTwo;
+    changeClassTwo(e.target);
+    for (let i = 0; i < content.length; i++) {
+        content[i].classList.remove('active');
+        if (content[i].dataset.content === currTab) {
+            content[i].classList.add('active');
+        }
+    }
+})
+
+console.log(tabsTwo);
