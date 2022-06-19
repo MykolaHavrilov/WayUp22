@@ -133,12 +133,10 @@ console.log(changeClassTwo);
 tabsTwo.addEventListener('click', e => {
     const currTab = e.target.dataset.btnTwo;
     changeClassTwo(e.target);
-    for (let i = 0; i < content.length; i++) {
-        content[i].classList.remove('active');
-        if (content[i].dataset.content === currTab) {
-            content[i].classList.add('active');
+    for (let i = 0; i < contentTwo.length; i++) {
+        contentTwo[i].classList.remove('active');
+        if (contentTwo[i].dataset.content === currTab) {
+            contentTwo[i].classList.add('active');
         }
     }
 })
-
-console.log(tabsTwo);
