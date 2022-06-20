@@ -98,7 +98,6 @@ prev.addEventListener('click', prevSlide);
 const tabs = document.getElementById('tabs');
 const content = document.querySelectorAll('.content');
 
-
 const changeClass = el => {
     for (let i = 0; i < tabs.children.length; i++) {
         tabs.children[i].classList.remove('active');
@@ -117,26 +116,26 @@ tabs.addEventListener('click', e => {
     }
 })
 
-const tabsTwo = document.getElementById('tabs-two');
-const contentTwo = document.querySelectorAll('.content-two');
+
+const tabstwo = document.getElementById('tabs-two');
+const contenttwo = document.querySelectorAll('.content-two');
 
 const changeClassTwo = el => {
-    for (let i = 0; i < tabsTwo.children.length; i++) {
-        tabsTwo.children[i].classList.remove('active');
+    for (let i = 0; i < tabstwo.children.length; i++) {
+        tabstwo.children[i].classList.remove('active');
     }
     el.classList.add('active');
     
 }
 console.log(changeClassTwo);
 
-
-tabsTwo.addEventListener('click', e => {
-    const currTab = e.target.dataset.btnTwo;
+tabstwo.addEventListener('click', e => {
+    const currTwo = e.target.dataset.btntwo;
     changeClassTwo(e.target);
-    for (let i = 0; i < contentTwo.length; i++) {
-        contentTwo[i].classList.remove('active');
-        if (contentTwo[i].dataset.content === currTab) {
-            contentTwo[i].classList.add('active');
+    for (let i = 0; i < contenttwo.length; i++) {
+        contenttwo[i].classList.remove('active');
+        if (contenttwo[i].dataset.contenttwo === currTwo) {
+            contenttwo[i].classList.add('active');
         }
     }
 })
